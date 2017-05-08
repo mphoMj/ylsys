@@ -19,8 +19,8 @@
 <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
 <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
 
-<!-- Theme style  -->
-<link rel="stylesheet" href="{{ asset('css/stylez.css') }}">
+<!-- Theme style  
+<link rel="stylesheet" href="{{ asset('css/stylez.css') }}">-->
 
 <!-- Modernizr JS -->
 <script src="{{ asset('js/modernizr-2.6.2.min.js') }}"></script>

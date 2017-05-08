@@ -1,15 +1,14 @@
-<div class="panel-body">
-    <div class="">
+
         <table class="table-striped">
 
             <thead>
                 <tr>
                     <th>Camp Name</th>
                     <th>Camp Type</th>
-                    <th>Camp Dates</th>
+                    
                     <th>Venue</th>
                     <th>Fee</th>
-
+<th>Camp Dates</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -23,7 +22,7 @@
                     <td>{{$camp->camptype->name}}</td>
                     <td>{{$camp->campvenue}}</td>
                     <td>{{$camp->campfee}}</td>
-                    <td>{{$camp->dateofbirth}}</td>
+                    
                     <td>{{$camp->startdate->toFormattedDateString()}}</td>
                     <td>{{$camp->enddate->toFormattedDateString()}}</td>
                 </tr>
@@ -38,5 +37,3 @@
             </tbody>
 
         </table>
-    </div>
-</div>

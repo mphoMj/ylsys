@@ -61,10 +61,7 @@ Route::group(/**
             return view('admin.area');
         });
         Route::get('camp', 'CampController@index');
-        Route::get('user', function () {
-
-            return view('admin.user');
-        });
+        Route::get('user', 'UserController@index';
         Route::get('team', function () {
             return view('admin.team');
         });

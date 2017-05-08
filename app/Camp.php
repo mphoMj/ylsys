@@ -2,7 +2,7 @@
 
 namespace YoungLife;
 
-use Illuminate\Database\Eloquent\Model;
+
 
 class Camp extends Model
 {

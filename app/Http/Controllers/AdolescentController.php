@@ -23,25 +23,15 @@ class AdolescentController extends Controller
 
     public function store(Request $request)
     {
-//        /**create new post using request data
-//         * $adolescent = new Adolescent;
-//         * /**$adolescent->firstname = request('firstname');
-//         * $adolescent->lastname = request(firstname);
-//         * $adolescent->nickname = request('nickname');
-//         * $adolescent->gender = request('gender');
-//         * $adolescent->dateofbirth = request('dateofbirth');
-//         * //save to database
-//         * $adolescent->save();
-//         * //redirect to homepage
-//         */
+//validate user input
         $this->validate(request(), [
             'firstname' => 'required',
             'lastname' => 'nullable',
-            'nickname' => 'required',
+            'nickname' => 'required|unique:adolescents',
             'gender' => 'required',
             'dateofbirth' => 'nullable'
         ]);
-               Adolescent::create(request(['firstname', 'lastname', 'nickname', 'gender', 'dateofbirth']));
+        Adolescent::create(request(['firstname', 'lastname', 'nickname', 'gender', 'dateofbirth']));
         return redirect('/');
 
     }

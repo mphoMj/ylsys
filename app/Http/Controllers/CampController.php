@@ -2,22 +2,32 @@
 
 namespace YoungLife\Http\Controllers;
 
+use YoungLife\Camp;
 use Illuminate\Http\Request;
 
 class CampController extends Controller
 {
-     public function index( Camp $camp)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
     {
-        $uri = $camp->path();
+        //
+        $uri = $request->path();
         $camps = Camp::all();
-        return view('$uri',compact('camps'));
+        return view($uri,compact('camps'));
     }
 
-
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //
-        return view('camp.create');
     }
 
     /**
@@ -29,16 +39,15 @@ class CampController extends Controller
     public function store(Request $request)
     {
         //
-
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \YoungLife\Camp  $camp
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Camp $camp)
+    public function show($id)
     {
         //
     }
@@ -46,10 +55,10 @@ class CampController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \YoungLife\Camp  $camp
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Camp $camp)
+    public function edit($id)
     {
         //
     }
@@ -58,10 +67,10 @@ class CampController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \YoungLife\Camp  $camp
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Camp $camp)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -69,10 +78,10 @@ class CampController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \YoungLife\Camp  $camp
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Camp $camp)
+    public function destroy($id)
     {
         //
     }

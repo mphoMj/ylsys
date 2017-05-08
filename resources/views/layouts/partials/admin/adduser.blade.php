@@ -64,7 +64,7 @@
             <div class="col-sm-10">
                 <select class="form-control" name="team">
                     <option selected->Team Name-</option>
-                    foreach ($teams as $team)
+                    @foreach ($teams as $team)
                     <option value={{$team->id}}>{{$team->teamname}}</option>
                     @endforeach
                 </select>

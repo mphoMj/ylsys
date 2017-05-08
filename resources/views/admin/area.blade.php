@@ -8,7 +8,6 @@
         <div class="panel panel-default">
             @include('layouts.partials.admin.addarea')
 
-
             <div class="panel-heading">
                 <h4> Established Area</h4>
 
@@ -29,13 +28,13 @@
                         <!--start php for each-->
                         <tr>
                             <td>
-                                Blantyre <!--add syntax to echo name-->
+                                {{$area->name}}
                             </td>
                             <td>
-                                January 2005<!--add syntax to echo description-->
+                                {{$area->description}}
                             </td>
                             <td>
-                                First Area<!--add syntax to echo date established-->
+                                {{$area->startedon}}
                             </td>
 
                             <td><a href="#" class="btn btn-outline-primary" alt="click to view teams in this area">View
