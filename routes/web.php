@@ -48,56 +48,71 @@ Route::get('/about', function () {
 });
 
 
-
 Route::group(/**
  *
  */
     ['middleware' => 'web'], function () {
 
     Route::group(['prefix' => 'admin'], function () {
-        Route::get('addarea', function () {
-            return view('admin.addarea');
+        Route::get('/', function () {
+            return view('admin.notification');
+        });
+        Route::get('area', function () {
+            return view('admin.area');
+        });
+        Route::get('camp', 'CampController@index');
+        Route::get('user', function () {
+
+            return view('admin.user');
+        });
+        Route::get('team', function () {
+            return view('admin.team');
+        });
+        Route::get('statistic', function () {
+            return view('admin.statistic');
         });
 
-        Route::get('adduser', function () {
-            return view('admin.adduser');
-        });
-        Route::get('dashboard', function () {
-            return view('admin.dashboard');
-        });
     });
     Route::group(['prefix' => 'areadirector'], function () {
-        Route::get('addteam', function () {
-            return view('areadirector.addteam');
-        });
-        Route::get('addclub', function () {
-            return view('areadirector.addclub');
-        });
-
-        Route::get('adduser', function () {
-            return view('areadirector.adduser');
-        });
-        Route::get('dashboard', function () {
-            return view('areadirector.dashboard');
-        });
-        Route::get('campstats', function () {
-            return view('areadirector.campstats');
+        Route::get('/', function () {
+            return view('areadirector.notification');
         });
         Route::get('recruitment', function () {
             return view('areadirector.recruitment');
         });
-    });
-    Route::group(['prefix' => 'parent'], function () {
-        Route::get('parent', function () {
-            return view('parent.parent');
+        Route::get('team', function () {
+            return view('areadirector.team');
+        });
+        Route::get('club', function () {
+            return view('areadirector.club');
+        });
 
+        Route::get('user', function () {
+            return view('areadirector.user');
         });
-        Route::get('kidinvitation', function () {
-            return view('parent.kidinvitation');
+        Route::get('statistic', function () {
+            return view('areadirector.statistic');
         });
-        Route::get('contribution', function () {
-            return view('parent.contribution');
+        Route::get('camp', function () {
+            return view('areadirector.camp');
         });
+
+    });
+
+
+    //team leader routes
+    Route::group(['prefix' => 'teamleader'], function () {
+        Route::get('recruitment', function () {
+            return view('teamleader.recruitment');
+        });
+        Route::get('addclub', function () {
+            return view('teamleader.addclub');
+        });
+
+        Route::get('dashboard', function () {
+            return view('teamleader.dashboard');
+        });
+
     });
     Route::group(['prefix' => 'volunteer'], function () {
         Route::get('recruitment', function () {
@@ -114,19 +129,20 @@ Route::group(/**
             return view('volunteer.dashboard');
         });
     });
-    Route::group(['prefix' => 'teamleader'], function () {
-        Route::get('recruitment', function () {
-            return view('teamleader.recruitment');
-        });
-        Route::get('addclub', function () {
-            return view('teamleader.addclub');
-        });
+    Route::group(['prefix' => 'parent'], function () {
+        Route::get('parent', function () {
+            return view('parent.parent');
 
-        Route::get('dashboard', function () {
-            return view('teamleader.dashboard');
         });
-
+        Route::get('kidinvitation', function () {
+            return view('parent.kidinvitation');
+        });
+        Route::get('contribution', function () {
+            return view('parent.contribution');
+        });
     });
+
+
     Route::group(['prefix' => 'adolescent'], function () {
         Route::get('/', 'AdolescentController@index');
         Route::get('create', 'AdolescentController@create');
@@ -135,3 +151,5 @@ Route::group(/**
     });
 
 });
+//email route
+Route::post('/send', 'EmailController@send');

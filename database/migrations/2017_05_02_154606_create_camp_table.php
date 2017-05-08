@@ -20,7 +20,7 @@ class CreateCampTable extends Migration
             $table->string('campvenue');
             $table->string('campfee');
             $table->date('startdate');
-            $table->date('endtdate');
+            $table->date('enddate');
             $table->integer('camptype_id')->unsigned();
             $table->foreign('camptype_id')->references('id')->on('camptypes');
         });

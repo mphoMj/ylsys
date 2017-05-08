@@ -10,7 +10,9 @@ class AdolescentController extends Controller
 
     public function index()
     {
-        return view('adolescent.index');
+        
+        $adolescents = Adolescent::all();
+        return view('adolescent.index',compact('adolescents'));
     }
 
     public function create()
@@ -21,17 +23,17 @@ class AdolescentController extends Controller
 
     public function store(Request $request)
     {
-        /**create new post using request data
-         * $adolescent = new Adolescent;
-         * /**$adolescent->firstname = request('firstname');
-         * $adolescent->lastname = request(firstname);
-         * $adolescent->nickname = request('nickname');
-         * $adolescent->gender = request('gender');
-         * $adolescent->dateofbirth = request('dateofbirth');
-         * //save to database
-         * $adolescent->save();
-         * //redirect to homepage
-         */
+//        /**create new post using request data
+//         * $adolescent = new Adolescent;
+//         * /**$adolescent->firstname = request('firstname');
+//         * $adolescent->lastname = request(firstname);
+//         * $adolescent->nickname = request('nickname');
+//         * $adolescent->gender = request('gender');
+//         * $adolescent->dateofbirth = request('dateofbirth');
+//         * //save to database
+//         * $adolescent->save();
+//         * //redirect to homepage
+//         */
         $this->validate(request(), [
             'firstname' => 'required',
             'lastname' => 'nullable',
@@ -39,8 +41,9 @@ class AdolescentController extends Controller
             'gender' => 'required',
             'dateofbirth' => 'nullable'
         ]);
-        Adolescent::create(request(['firstname', 'lastname', 'nickname', 'gender', 'dateofbirth']));
+               Adolescent::create(request(['firstname', 'lastname', 'nickname', 'gender', 'dateofbirth']));
         return redirect('/');
+
     }
 
     public function show(Adolescent $adolescents)

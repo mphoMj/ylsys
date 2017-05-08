@@ -8,7 +8,11 @@
                     <div class="panel-heading">Parent</div>
 
                     <div class="panel-body">
-                        You are logged in!
+                        KId invitation
+                        camp name
+                        date
+                        fee
+                        YL contact details
                     </div>
                 </div>
             </div>

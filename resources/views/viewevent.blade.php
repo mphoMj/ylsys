@@ -1,24 +1,27 @@
 @extends('layouts.default') @section('content')
-<div class="container">
-    <div class="row">
-
-        <section>
-            <h3>View Events</h3>
-
-            <div class="table-responsive">
-                <table class="alt">
-                    <thead>
+    <div class="container">
+   <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4> Upcoming Camps</h4>
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="">
+                        <table class="table-striped">
+                    
+                        <thead>
                         <tr>
                             <th>Event Name</th>
                             <th>Event Type</th>
-                            <th>Event Dates </th>
+                            <th>Event Dates</th>
                             <th>Venue</th>
                             <th>Fee</th>
 
-                            <th></th><th></th>
+                            <th></th>
+                            <th></th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <!-- php for each-->
                         <tr>
                             <td>
@@ -38,16 +41,16 @@
                             </td>
 
                             <td>
-                                <input class="btn-primary" type="submit" name="submit" value="Update Event" />
+                                <input class="btn-primary" type="submit" name="submit" value="Update Event"/>
                             </td>
                         </tr>
-                        
+                        <!-- php end for each
+                        else -->
 
+                        </tbody>
 
-                    </tbody>
-
-                </table>
-            </div>
+                    </table>
+                </div>
+        </div>
     </div>
-</div>
 @endsection

@@ -9,9 +9,9 @@
 <div id='page'>
     @include('layouts.partials.mainnav')
 
-        <div class="container">
-            @yield('content')
-        </div>
+    <div class="container">
+        @yield('content')
+    </div>
 
 
     @include('layouts.partials.footer')

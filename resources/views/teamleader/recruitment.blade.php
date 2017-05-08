@@ -9,7 +9,6 @@
     <div id="TabbedPanels1" class="nav">
         <ul class="nav nav-tabs">
             <li class="nav-item "><a href="">NOtifications</a></li>
-            <li class="nav-item active"><a href="#"></a></li>
             <li class="nav-item"><a href="#">Add Member</a></li>
             <li class="nav-item"><a href="#">View Literature</a></li>
             <li class="nav-item"><a href="#">Book Sales Report</a></li>
@@ -25,13 +24,13 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4> Event Confirmattions</h4>
+                        <h4> Recruitment</h4>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="row-fluid">
                             <!--php if recruitments not found-->
-                            <h4>No New recruitments on Any of the events </h4>
+                            <h4>No New recruitments </h4>
                             <!--php else if recruitments found-->
                             <table class="table table-bordered table-condensed table-hover table-responsive">
                                 <tr>
@@ -49,7 +48,9 @@
                                     </td>
                                     <td><input type="check" class="form-control form-control-sm" placeholder="0"/></td>
                                     <td>
-                                    <td><input type="radio" class="form-control form-control-sm" placeholder="0"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
                                     <td><input type="number" class="form-control form-control-sm" placeholder="0"/></td>
                                     <td>
                                         <select class="form-control icon-select-arrows" name="camp">

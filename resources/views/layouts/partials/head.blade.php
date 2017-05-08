@@ -4,9 +4,6 @@
 <title>Young Life Malawi - @yield('title')</title>
 
 
-
-
-
 <!-- Animate.css -->
 <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
 <!-- Icomoon Icon Fonts-->

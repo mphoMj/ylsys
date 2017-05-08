@@ -49,6 +49,7 @@
             </div>
             @include('layouts.partials.errors')
         </form>
+
     </div>
 
 @endsection
